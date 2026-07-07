@@ -1,39 +1,22 @@
 {
   "manifest_version": 2,
-  "name": "My Firefox Extension",
+  "name": "My Dummy Extension",
   "version": "1.0.0",
-  "description": "A sample Firefox extension with random functionality",
+  "description": "A simple dummy extension for testing",
   
   "permissions": [
     "activeTab",
-    "storage",
-    "tabs",
-    "webNavigation",
-    "contextMenus",
-    "clipboardWrite"
+    "storage"
   ],
   
   "background": {
-    "scripts": ["app.js"],
+    "scripts": ["background.js"],
     "persistent": false
   },
   
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "My Extension",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "32": "icons/icon32.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  
-  "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "default_title": "Dummy Extension"
   },
   
   "content_scripts": [
@@ -44,8 +27,7 @@
     }
   ],
   
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
+  "icons": {
+    "48": "icon.png"
   }
 }
